@@ -1,11 +1,15 @@
 :root {
-    --primary-color: #33383C;
+    --primary-color: #5b496f;
   }
   
   * {
       box-sizing: border-box;
     }
     body {
+      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+      height: 100vh;
       height: 100vh;
       display: flex;
       align-items: center;
@@ -13,6 +17,19 @@
       font-family: 'Josefin Sans', Arial, sans-serif;
       overflow: hidden;
     }
+
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
     .form-container {
       -webkit-transform: translate3d(0, 0, 0);
       position: absolute;
@@ -191,4 +208,5 @@
         z-index: 2;
       }
     }
+    
     
